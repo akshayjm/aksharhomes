@@ -4,48 +4,533 @@
 	Modified by Akshay Mehta under the CCA 3.0 license
 -->
 <html>
-	<head>
-		<title>Gallery</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
-		<div id="page-wrapper">
 
-			<!-- Header -->
-				<header id="header">
-					<h1><a href="index.html">AKSHAR HOMES</a></h1>
-					<nav id="nav">
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="anugraha.html">Anugraha</a></li>
-							<li><a href="gallery.html">Gallery</a></li>
-							<li><a href="aboutus.html">About Us</a></li>
-							<li><a href="contactus.html" class="button">Contact Us</a></li>
-						</ul>
-					</nav>
-				</header>
+<head>
+	<title>Gallery</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<style>
+		* {
+			box-sizing: border-box
+		}
 
-			<!-- Main -->
-				<section id="main" class="container">
-					<header>
-						<h2>Gallery</h2>
-						<p>Anugraha</p>
-					</header>
-					<div class="box">
-						<span class="image featured"><img src="images/anugraha.jpg" alt="" /></span>
-						<h3><u>Panoramic View From Terrace</u></h3>
-						<!-- <iframe width="600" height="400" allowfullscreen style="border-style:none;" src="https://cdn.pannellum.org/2.5/pannellum.htm#panorama=https://github.com/akshayjm/aksharhomes/tree/master/images/ANUGRAHAPanoramic.jpg"></iframe> -->
-						<a href="./images/ANUGRAHAPanoramic.jpg">test</a>
-						<h3><u>Stills</u></h3>
-						</div>
+		.mySlides {
+			display: none
+		}
+
+		/* Slideshow container */
+		.slideshow-container {
+			max-width: 1000px;
+			position: relative;
+			margin: auto;
+		}
+
+		/* Next & previous buttons */
+		.prev,
+		.next {
+			cursor: pointer;
+			position: absolute;
+			top: 50%;
+			width: auto;
+			padding: 16px;
+			margin-top: -22px;
+			color: white;
+			font-weight: bold;
+			font-size: 18px;
+			transition: 0.6s ease;
+			border-radius: 0 3px 3px 0;
+			user-select: none;
+		}
+
+		/* Position the "next button" to the right */
+		.next {
+			right: 0;
+			border-radius: 3px 0 0 3px;
+		}
+
+		/* On hover, add a black background color with a little bit see-through */
+		.prev:hover,
+		.next:hover {
+			background-color: rgba(0, 0, 0, 0.8);
+		}
+
+		/* Caption text */
+		.textslide {
+			color: #f2f2f2;
+			font-size: 15px;
+			padding: 8px 12px;
+			position: absolute;
+			bottom: 8px;
+			width: 100%;
+			text-align: center;
+		}
+
+		/* Number text (1/3 etc) */
+		.numbertext {
+			color: #f2f2f2;
+			font-size: 12px;
+			padding: 8px 12px;
+			position: absolute;
+			top: 0;
+		}
+
+		/* The dots/bullets/indicators */
+		.dot {
+			cursor: pointer;
+			height: 15px;
+			width: 15px;
+			margin: 0 2px;
+			background-color: #bbb;
+			border-radius: 50%;
+			display: inline-block;
+			transition: background-color 0.6s ease;
+		}
+
+		.active,
+		.dot:hover {
+			background-color: #717171;
+		}
+
+		/* Fading animation */
+		.fade {
+			-webkit-animation-name: fade;
+			-webkit-animation-duration: 1.5s;
+			animation-name: fade;
+			animation-duration: 1.5s;
+		}
+
+		@-webkit-keyframes fade {
+			from {
+				opacity: .4
+			}
+
+			to {
+				opacity: 1
+			}
+		}
+
+		@keyframes fade {
+			from {
+				opacity: .4
+			}
+
+			to {
+				opacity: 1
+			}
+		}
+
+		/* On smaller screens, decrease text size */
+		@media only screen and (max-width: 300px) {
+
+			.prev,
+			.next,
+			.text {
+				font-size: 11px
+			}
+		}
+	</style>
+</head>
+
+<body class="is-preload">
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<h1><a href="index.html">AKSHAR HOMES</a></h1>
+			<nav id="nav">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="anugraha.html">Anugraha</a></li>
+					<li><a href="gallery.html">Gallery</a></li>
+					<li><a href="aboutus.html">About Us</a></li>
+					<li><a href="contactus.html" class="button">Contact Us</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- Main -->
+		<section id="main" class="container">
+			<header>
+				<h2>Gallery</h2>
+				<p>Anugraha</p>
+			</header>
+			<div class="box">
+				<!-- <span class="image featured"><img src="images/anugraha.jpg" alt="" /></span> -->
+				<h3><u>Panoramic View From Terrace</u></h3>
+				<iframe height="447px" src="./images/ANUGRAHAPanoramic.jpg"></iframe>
+				<h3><u>Stills</u></h3>
+				<!-- Slideshow container -->
+				<div class="slideshow-container">
+
+					<!-- Full-width images with number and caption text -->
+					<div class="mySlides fade">
+						<div class="numbertext">1 / 49</div>
+						<img src="images/gallery/ANUGRAHA_Animated.jpeg" style="width:100%">
+						<div class="textslide">ANUGRAHA_Animated</div>
 					</div>
-				</section>
 
-		<!-- Footer -->
-		<footer id="footer">
-			<!-- <ul class="icons">
+					<div class="mySlides fade">
+						<div class="numbertext">2 / 49</div>
+						<img src="images/gallery/ANUGRAHA_Animated2.jpeg" style="width:100%">
+						<div class="textslide">ANUGRAHA_Animated2</div>
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numbertext">3 / 49</div>
+						<img src="images/gallery/ANUGRAHA_A_FloorPlan.jpeg" style="width:100%">
+						<div class="textslide">ANUGRAHA_A_FloorPlan</div>
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numbertext">4 / 49</div>
+						<img src="images/gallery/ANUGRAHA_A_StiltPlan.jpeg" style="width:100%">
+						<div class="textslide">ANUGRAHA_A_StiltPlan</div>
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numbertext">5 / 49</div>
+						<img src="images/gallery/ANUGRAHA_Construction01.jpeg" style="width:100%">
+						<div class="textslide">ANUGRAHA_Construction01</div>
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numbertext">6 / 49</div>
+						<img src="images/gallery/ANUGRAHA_Construction02.jpeg" style="width:100%">
+						<div class="textslide">ANUGRAHA_Construction02</div>
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numbertext">7 / 49</div>
+						<img src="images/gallery/ANUGRAHA_Construction03.jpeg" style="width:100%">
+						<div class="textslide">ANUGRAHA_Construction03</div>
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numbertext">8 / 49</div>
+						<img src="images/gallery/ANUGRAHA_Construction04.jpeg" style="width:100%">
+						<div class="textslide">ANUGRAHA_Construction04</div>
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numbertext">9 / 49</div>
+						<img src="images/gallery/ANUGRAHA_Construction05.jpeg" style="width:100%">
+						<div class="textslide">ANUGRAHA_Construction05</div>
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numbertext">10 / 49</div>
+						<img src="images/gallery/ANUGRAHA_Construction06.jpeg" style="width:100%">
+						<div class="textslide">ANUGRAHA_Construction06</div>
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numbertext">11 / 49</div>
+						<img src="images/gallery/ANUGRAHA_Construction07.jpeg" style="width:100%">
+						<div class="textslide">ANUGRAHA_Construction07</div>
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numbertext">12 / 49</div>
+						<img src="images/gallery/ANUGRAHA_Construction08.jpeg" style="width:100%">
+						<div class="textslide">ANUGRAHA_Construction08</div>
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numbertext">13 / 49</div>
+						<img src="images/gallery/ANUGRAHA_Construction09.jpeg" style="width:100%">
+						<div class="textslide">ANUGRAHA_Construction09</div>
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numbertext">14 / 49</div>
+						<img src="images/gallery/ANUGRAHA_Construction10.jpeg" style="width:100%">
+						<div class="textslide">ANUGRAHA_Construction10</div>
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numbertext">15 / 49</div>
+						<img src="images/gallery/ANUGRAHA_Construction11.jpeg" style="width:100%">
+						<div class="textslide">ANUGRAHA_Construction11</div>
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numbertext">16 / 49</div>
+						<img src="images/gallery/ANUGRAHA_Construction12.jpeg" style="width:100%">
+						<div class="textslide">ANUGRAHA_Construction12</div>
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numbertext">17 / 49</div>
+						<img src="images/gallery/ANUGRAHA_Construction13.jpeg" style="width:100%">
+						<div class="textslide">ANUGRAHA_Construction13</div>
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numbertext">18 / 49</div>
+						<img src="images/gallery/ANUGRAHA_Construction14.jpeg" style="width:100%">
+						<div class="textslide">ANUGRAHA_Construction14</div>
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numbertext">19 / 49</div>
+						<img src="images/gallery/ANUGRAHA_ReadyToOccupy01.jpeg" style="width:100%">
+						<div class="textslide">ANUGRAHA_ReadyToOccupy01</div>
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numbertext">20 / 49</div>
+						<img src="images/gallery/ANUGRAHA_ReadyToOccupy02.jpeg" style="width:100%">
+						<div class="textslide">ANUGRAHA_ReadyToOccupy02</div>
+					</div>
+					
+					<div class="mySlides fade">
+						<div class="numbertext">21 / 49</div>
+						<img src="images/gallery/ANUGRAHA_ReadyToOccupy03.jpeg" style="width:100%">
+						<div class="textslide">ANUGRAHA_ReadyToOccupy03</div>
+					</div>
+					
+					<div class="mySlides fade">
+						<div class="numbertext">22 / 49</div>
+						<img src="images/gallery/ANUGRAHA_ReadyToOccupy04.jpeg" style="width:100%">
+						<div class="textslide">ANUGRAHA_ReadyToOccupy04</div>
+					</div>
+					
+					<div class="mySlides fade">
+						<div class="numbertext">23 / 49</div>
+						<img src="images/gallery/ANUGRAHA_ReadyToOccupy05.jpeg" style="width:100%">
+						<div class="textslide">ANUGRAHA_ReadyToOccupy05</div>
+					</div>
+					
+					<div class="mySlides fade">
+						<div class="numbertext">24 / 49</div>
+						<img src="images/gallery/ANUGRAHA_ReadyToOccupy06.jpeg" style="width:100%">
+						<div class="textslide">ANUGRAHA_ReadyToOccupy06</div>
+					</div>
+					
+					<div class="mySlides fade">
+						<div class="numbertext">25 / 49</div>
+						<img src="images/gallery/ANUGRAHA_ReadyToOccupy07.jpeg" style="width:100%">
+						<div class="textslide">ANUGRAHA_ReadyToOccupy07</div>
+					</div>
+					
+					<div class="mySlides fade">
+						<div class="numbertext">26 / 49</div>
+						<img src="images/gallery/ANUGRAHA_ReadyToOccupy08.jpeg" style="width:100%">
+						<div class="textslide">ANUGRAHA_ReadyToOccupy08</div>
+					</div>
+					
+					<div class="mySlides fade">
+						<div class="numbertext">27 / 49</div>
+						<img src="images/gallery/ANUGRAHA_ReadyToOccupy09.jpeg" style="width:100%">
+						<div class="textslide">ANUGRAHA_ReadyToOccupy09</div>
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numbertext">28 / 49</div>
+						<img src="images/gallery/ANUGRAHA_ReadyToOccupy10.jpeg" style="width:100%">
+						<div class="textslide">ANUGRAHA_ReadyToOccupy10</div>
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numbertext">29 / 49</div>
+						<img src="images/gallery/ANUGRAHA_StepsAndLobby01.jpeg" style="width:100%">
+						<div class="textslide">ANUGRAHA_StepsAndLobby01</div>
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numbertext">30 / 49</div>
+						<img src="images/gallery/ANUGRAHA_StepsAndLobby02.jpeg" style="width:100%">
+						<div class="textslide">ANUGRAHA_StepsAndLobby02</div>
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numbertext">31 / 49</div>
+						<img src="images/gallery/ANUGRAHA_StiltFloor01.jpeg" style="width:100%">
+						<div class="textslide">ANUGRAHA_StiltFloor01</div>
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numbertext">32 / 49</div>
+						<img src="images/gallery/ANUGRAHA_Terrace01.jpeg" style="width:100%">
+						<div class="textslide">ANUGRAHA_Terrace01</div>
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numbertext">33 / 49</div>
+						<img src="images/gallery/B2_01.jpeg" style="width:100%">
+						<div class="textslide">B2_01</div>
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numbertext">34 / 49</div>
+						<img src="images/gallery/B2_02.jpeg" style="width:100%">
+						<div class="textslide">B2_02</div>
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numbertext">35 / 49</div>
+						<img src="images/gallery/B2_03.jpeg" style="width:100%">
+						<div class="textslide">B2_03</div>
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numbertext">36 / 49</div>
+						<img src="images/gallery/B2_04.jpeg" style="width:100%">
+						<div class="textslide">B2_04</div>
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numbertext">37 / 49</div>
+						<img src="images/gallery/B2_05.jpeg" style="width:100%">
+						<div class="textslide">B2_05</div>
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numbertext">38 / 49</div>
+						<img src="images/gallery/B2_06.jpeg" style="width:100%">
+						<div class="textslide">B2_06</div>
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numbertext">39 / 49</div>
+						<img src="images/gallery/B2_07.jpeg" style="width:100%">
+						<div class="textslide">B2_07</div>
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numbertext">40 / 49</div>
+						<img src="images/gallery/B2_08.jpeg" style="width:100%">
+						<div class="textslide">B2_08</div>
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numbertext">41 / 49</div>
+						<img src="images/gallery/B3_01.jpeg" style="width:100%">
+						<div class="textslide">B3_01</div>
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numbertext">42 / 49</div>
+						<img src="images/gallery/B3_02.jpeg" style="width:100%">
+						<div class="textslide">B3_02</div>
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numbertext">43 / 49</div>
+						<img src="images/gallery/B3_03.jpeg" style="width:100%">
+						<div class="textslide">B3_03</div>
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numbertext">44 / 49</div>
+						<img src="images/gallery/B3_04.jpeg" style="width:100%">
+						<div class="textslide">B3_04</div>
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numbertext">45 / 49</div>
+						<img src="images/gallery/B3_05.jpeg" style="width:100%">
+						<div class="textslide">B3_05</div>
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numbertext">46 / 49</div>
+						<img src="images/gallery/B3_06.jpeg" style="width:100%">
+						<div class="textslide">B3_06</div>
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numbertext">47 / 49</div>
+						<img src="images/gallery/B3_07.jpeg" style="width:100%">
+						<div class="textslide">B3_07</div>
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numbertext">48 / 49</div>
+						<img src="images/gallery/B3_08.jpeg" style="width:100%">
+						<div class="textslide">B3_08</div>
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numbertext">49 / 49</div>
+						<img src="images/gallery/B3_09.jpeg" style="width:100%">
+						<div class="textslide">B3_09</div>
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numbertext">49 / 49</div>
+						<img src="images/gallery/B3_01.jpeg" style="width:100%">
+						<div class="textslide">B3_01</div>
+					</div>
+
+					<!-- Next and previous buttons -->
+					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+				</div>
+				<br>
+
+				<!-- The dots/circles -->
+				<div style="text-align:center">
+					<span class="dot" onclick="currentSlide(1)"></span>
+					<span class="dot" onclick="currentSlide(2)"></span>
+					<span class="dot" onclick="currentSlide(3)"></span>
+					<span class="dot" onclick="currentSlide(4)"></span>
+					<span class="dot" onclick="currentSlide(5)"></span>
+					<span class="dot" onclick="currentSlide(6)"></span>
+					<span class="dot" onclick="currentSlide(7)"></span>
+					<span class="dot" onclick="currentSlide(8)"></span>
+					<span class="dot" onclick="currentSlide(9)"></span>
+					<span class="dot" onclick="currentSlide(10)"></span>
+					<span class="dot" onclick="currentSlide(11)"></span>
+					<span class="dot" onclick="currentSlide(12)"></span>
+					<span class="dot" onclick="currentSlide(13)"></span>
+					<span class="dot" onclick="currentSlide(14)"></span>
+					<span class="dot" onclick="currentSlide(15)"></span>
+					<span class="dot" onclick="currentSlide(16)"></span>
+					<span class="dot" onclick="currentSlide(17)"></span>
+					<span class="dot" onclick="currentSlide(18)"></span>
+					<span class="dot" onclick="currentSlide(19)"></span>
+					<span class="dot" onclick="currentSlide(20)"></span>
+					<span class="dot" onclick="currentSlide(21)"></span>
+					<span class="dot" onclick="currentSlide(22)"></span>
+					<span class="dot" onclick="currentSlide(23)"></span>
+					<span class="dot" onclick="currentSlide(24)"></span>
+					<span class="dot" onclick="currentSlide(25)"></span>
+					<span class="dot" onclick="currentSlide(26)"></span>
+					<span class="dot" onclick="currentSlide(27)"></span>
+					<span class="dot" onclick="currentSlide(28)"></span>
+					<span class="dot" onclick="currentSlide(29)"></span>
+					<span class="dot" onclick="currentSlide(30)"></span>
+					<span class="dot" onclick="currentSlide(31)"></span>
+					<span class="dot" onclick="currentSlide(32)"></span>
+					<span class="dot" onclick="currentSlide(33)"></span>
+					<span class="dot" onclick="currentSlide(34)"></span>
+					<span class="dot" onclick="currentSlide(35)"></span>
+					<span class="dot" onclick="currentSlide(36)"></span>
+					<span class="dot" onclick="currentSlide(37)"></span>
+					<span class="dot" onclick="currentSlide(38)"></span>
+					<span class="dot" onclick="currentSlide(39)"></span>
+					<span class="dot" onclick="currentSlide(40)"></span>
+					<span class="dot" onclick="currentSlide(41)"></span>
+					<span class="dot" onclick="currentSlide(42)"></span>
+					<span class="dot" onclick="currentSlide(43)"></span>
+					<span class="dot" onclick="currentSlide(44)"></span>
+					<span class="dot" onclick="currentSlide(45)"></span>
+					<span class="dot" onclick="currentSlide(46)"></span>
+					<span class="dot" onclick="currentSlide(47)"></span>
+					<span class="dot" onclick="currentSlide(48)"></span>
+					<span class="dot" onclick="currentSlide(49)"></span>
+
+				
+				</div>
+			</div>
+	</div>
+	</section>
+
+	<!-- Footer -->
+	<footer id="footer">
+		<!-- <ul class="icons">
 						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
 						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
@@ -53,10 +538,10 @@
 						<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
 						<li><a href="#" class="icon brands fa-google-plus"><span class="label">Google+</span></a></li>
 					</ul> -->
-			<ul class="copyright">
-				<li>&copy; 2021 Akshar Homes. All rights reserved.</li>
-			</ul>
-		</footer>
+		<ul class="copyright">
+			<li>&copy; 2021 Akshar Homes. All rights reserved.</li>
+		</ul>
+	</footer>
 
 	</div>
 
@@ -69,6 +554,34 @@
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
 
+	<script>
+		var slideIndex = 1;
+		showSlides(slideIndex);
+
+		function plusSlides(n) {
+			showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n) {
+			showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+			var i;
+			var slides = document.getElementsByClassName("mySlides");
+			var dots = document.getElementsByClassName("dot");
+			if (n > slides.length) { slideIndex = 1 }
+			if (n < 1) { slideIndex = slides.length }
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			}
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			}
+			slides[slideIndex - 1].style.display = "block";
+			dots[slideIndex - 1].className += " active";
+		}
+	</script>
 </body>
 
 </html>
